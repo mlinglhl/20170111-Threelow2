@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "InputHandler.h"
+#import "Dice.h"
+#import "GameController.h"
 
 int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-    }
+    InputHandler *handler = [[InputHandler alloc] init];
+    GameController *referee = [[GameController alloc] initWithDice:[GameController makeDice:5]];
     return 0;
 }
